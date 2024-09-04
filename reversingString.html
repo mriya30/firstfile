@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class stack{
+            constructor(str){
+                this.str=str;
+                this.arr=[]
+            }
+            reverse(){
+                ////first method using split method - convert string to array
+                // const arr=this.str.split('')
+                // console.log(arr);
+
+                ////convert string to array
+                for(var newStr of this.str){
+                    this.arr.push(newStr)
+                }
+                console.log(this.arr);
+                let reverseStr=" ";
+                while(this.arr.length>0){
+                    reverseStr+=this.arr.pop()
+                }
+                return reverseStr
+            }
+        }
+        const Stack=new stack("web dev")
+        console.log(Stack.reverse())
+    </script>
+</body>
+</html>

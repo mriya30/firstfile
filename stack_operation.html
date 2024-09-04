@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Stack{
+            constructor(){
+                this.arr=[]
+            }
+            insert(element){
+                this.arr.push(element)
+            }
+            remove(){
+                if(this.arr.length==0){
+                    return "underflow"
+                }
+                return this.arr.pop()
+            }
+            display(){
+                // this.arr.forEach((item)=>{
+                //     console.log(item)
+                // })
+                for(var i=this.arr.length-1;i>=0;i--){
+                    console.log(this.arr[i]);
+                }
+            }
+            peek(){
+                return this.arr[this.arr.length-1]
+            }
+            size(){
+                return this.arr.length;
+            }
+        }
+        const stack=new Stack();
+        stack.insert(4)
+        stack.insert(5)
+        stack.insert(6)
+        stack.insert(7)
+        stack.display()
+
+        console.log("peek.........");
+        console.log(stack.peek());
+
+        console.log("size.........");
+        console.log(stack.size());
+
+        console.log("remove.......");
+        console.log(stack.remove());
+        console.log(stack.remove()); 
+        console.log(stack.remove());
+
+        console.log("display.........");
+        stack.display(
+            
+        )
+    </script>
+</body>
+</html>
